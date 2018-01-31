@@ -33,7 +33,7 @@ public class ParticipantController {
         return "redirect:" + page();
     }
 
-    @PostMapping(value = "/{id}", params = "action=delete")
+    @DeleteMapping("/{id}")
     public String remove(@PathVariable Long id) {
         participantRepository.delete(id);
         return "redirect:/" + page();
